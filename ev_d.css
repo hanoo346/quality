@@ -1,0 +1,88 @@
+
+/*body{
+    background-image:url("bac.png");} */
+
+*{
+    text-align: right;
+}
+table, th, td {
+    text-align: rtl;
+    border: 1px solid;
+    text-align: center;
+    }
+    th ,td{ text-align: rtl;
+        width: 95%;
+        height: 50px;
+       color: rgb(83, 97, 204);
+        }
+        th {
+          background-color: #242475;
+           color: white;
+            }
+            td{
+width: 50;
+
+            }
+            #chart-analysis {
+                max-width: 80%; /* يحدد العرض ليكون مناسبًا للشاشة */
+                margin: auto;
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+            
+            /* تنسيق العنوان */
+            #chart-analysis h2 {
+                color: #333;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            
+            /* تنسيق الحاويات الخاصة بالرسوم البيانية */
+            .chart-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+            
+                max-width: 600px; /* الحد الأقصى لحجم الرسم البياني */
+                margin: 20px auto; /* يجعل المخططات متوسطة في الصفحة */
+                background: #ffffff;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+            }
+            
+            /* ضبط حجم الـ Canvas لتناسب الحاوية */
+            canvas {
+                max-width: 50%;
+                height: auto;
+            }
+
+            button {
+                padding: 10px 20px;
+                margin: 5px;
+                font-size:larger;
+                font-weight: bold;
+               font-style: oblique;
+               font-family:Arial, Helvetica, sans-serif;
+                color: #5037c1;
+
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            
+button:hover {
+    background-color:  #2d125f;
+}
+button:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+    transition: transform .5s;
+}
+
+hr{
+    border: 20px;}

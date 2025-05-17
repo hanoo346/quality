@@ -1,0 +1,26 @@
+<?php
+session_start();
+include 'db_connection.php';
+
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] != 'Admin') {
+    header("Location: login.php");
+    exit();
+}
+
+$question_id = $_GET['id'];
+
+// جلب معرف الاستبيان قبل الحذف
+$sql = "SELECT survey_id FROM SurveyQuestions WHERE question_id = '$question_id'";
+$result = $conn->query($sql);
+$question = $result->fetch_assoc();
+$survey_id = $question['survey_id'];
+
+// حذف السؤال
+$sql = "DELETE FROM SurveyQuestions WHERE question_id = '$question_id'";
+if ($conn->query($sql) === TRUE) {
+    header("Location: add_survey_questions.php?id=$survey_id");
+    exit();
+} else {
+    echo "حدث خطأ أثناء حذف السؤال: " . $conn->error;
+}
+?>

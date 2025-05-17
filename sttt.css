@@ -1,0 +1,87 @@
+
+body{width: 80%;
+    background-image:url(".png");
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-size:cover;
+    background-position: center;
+}
+.dashboard-container {
+
+        margin-left: 270px; /* ترك مسافة للقائمة الجانبية */
+        padding: 20px;
+        width: calc(100% - 270px); /* عرض المحتوى ليملأ باقي الصفحة */
+        
+    text-align: right;
+    width: 80%;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.box{ 
+
+    background: #8079df;
+    justify-content: space-around;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    padding: 25px 25px;
+    border-radius: 200px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+}
+
+h1 {
+    color: #2d125f;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 5;
+}
+
+nav ul li {
+    
+    margin: 10px 0;
+    
+}
+
+nav ul li a {  
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration:tomato;
+     cursor: pointer;
+    transition: all .3s;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+   
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color:  #2d125f;
+}
+button:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+    transition: transform .5s;
+}
+.content {
+    margin-top: 20px;
+}
+
+.content h2 {
+    color: #555;
+}
